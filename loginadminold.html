@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="logstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+      body {font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: rgb(220, 112, 241);
+        background:linear-gradient(45deg, blueviolet, rgb(122, 200, 172)); color: white;}
+        .inputt{
+            width:200px;height: 20px;
+            margin-bottom: 5px;
+        }
+        #navbar{
+            width:100%;
+            height: 100px;
+            
+            display: flex;
+            color: white;
+            background-image:url(./bg1.webp);
+        }
+        #navleft{
+            width:40%;
+            height:100%;
+            max-width:max-content;
+            max-height: max-content;
+            padding: 0px;;
+        }
+        #navmid{
+            display: flex;
+            width:60%;
+            height:100%;
+            justify-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: Inter,sans-serif;
+        }
+        #navright{
+            width:20%;
+            height:100%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            padding-top:50 px; 
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  height: 110px;
+  width:150px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: rgb(233, 41, 98);cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdowncontent a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdowncontent a:hover {
+  background-color: navy;cursor: pointer;
+  color: rgb(233, 41, 98);
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;cursor: pointer;
+}
+    </style>
+</head>
+<body style="margin: 0;width:100%;height:100vh;">
+    <div style="display:flex;height: 120px;background-image: url(bg1.webp);">
+        <div id="navleft">
+          <img src="./logo1.jpg" alt="" style="width:100%;
+          height:100%;">
+        </div>
+        
+      <div  class="dropdown" style="overflow:hidden;">
+            <a href="./BookTickets.html" style="color: white;"><button class="dropbtn">Help<i class="fa fa-caret-down"></i></button></a>
+               <div class="dropdowncontent">
+            <a href="">Please call 8888000012</a>
+            </div>
+      </div>
+      
+      
+      
+      <div id="navright" >
+        <span class="material-symbols-outlined" style="position: absolute;left: 85%; top:7%;">
+            house
+        </span>
+        <a href="./homemain.html" style="font-family:Inter,sans-serif;position: absolute;left: 87%; top:7%;color:white;">Go to home</a>
+     </div>
+     
+       
+      </div>
+      </div>
+    <h3 style="text-align: center;font-family: Inter,sans-serif;color: navy;"> Admin Login</h3>
+    <div style="display: flex;position: relative;left: 300px;top:5px;">
+        <!-- <div style="justify-content: center;align-items: center;"></div> -->
+    <table style="background-color: #fff;border-radius: 10px 10px 10px 10px;border:2px;box-shadow: 3px 3px 5px 5px #8888;width:50%;height:50%;">
+         
+        <tr> 
+        <td style="width:100px;">
+        <img src="./draw2.svg" alt="" style="width:270px;height:300px;max-width:fit-content;max-height: max-content;"></td>
+    <td>
+      <!-- <form name="myform" action="#" method="post" onsubmit="return validateForm()"> -->
+
+
+
+    <input type="text" id="un" class="inp" name="username" placeholder="User name" required><br>
+    <input type="password" id="pas" class="inp" name="pass" placeholder="Password"  required><br>
+    <h5 style="color: black;margin-left: 120px;">Forgot Password?</h5><br>
+    <input type="submit" value="Login" class="btn" onClick="login()" />
+
+</td>
+<!-- </form> -->
+<br><br><br>
+
+</tr>  
+</table>
+</div>
+<script>
+        
+    function login()
+    {
+    var uname = document.getElementById("un").value;
+    var pwd = document.getElementById("pas").value;
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(uname =='')
+    {
+        alert("Please fill out Username");
+        
+    }
+    else if(pwd=='')
+    {
+        alert("Please fill out Password");
+        
+    }
+    else if(pwd.length < 6)
+    {
+        alert("Password must be of 6 characters.");
+    }
+    else
+    {
+        // alert('Thank You for Login & You are Redirecting to Campuslife Website');
+//Redirecting to other page or webste code or you can set your own html page.
+   window.location = "./homeadmin.html";
+        }
+}
+</script>
+</body>
+</html>

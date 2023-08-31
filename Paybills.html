@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Bills</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
+    <style>
+        body {font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: rgb(220, 112, 241);
+        background:linear-gradient(90deg, blueviolet, rgb(122, 200, 172)); color: white;}
+
+        #navbar{
+            width:100%;
+            height: 110px;
+            
+            display: flex;
+            color: white;
+            background-image:url(./bg1.webp);
+        }
+        #navleft{
+            width:40%;
+            height:100%;
+            max-width:max-content;
+            max-height: max-content;
+            padding: 0px;;
+        }
+        #navmid{
+            display: flex;
+            width:60%;
+            height:100%;
+            justify-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: Inter,sans-serif;
+        }
+        #navright{
+            width:20%;
+            height:100%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            padding-top:50 px;
+        
+            
+        }
+        .buttonoptn{
+            width:30%;
+            height: 70px;
+            border-radius: 50px 50px 50px 50px;
+            color:aliceblue;
+            /* background-color: #6D67E4; */
+            font-size: x-large;
+            background-image:url(./bg1.webp);
+
+        }
+        .buttonoptn:hover{
+            cursor:pointer;
+            background-color: pink;
+            color: white;
+        }
+        .btnf{
+            float:right;
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  height: 110px;
+  width:150px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: rgb(233, 41, 98);cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdowncontent a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdowncontent a:hover {
+  background-color: navy;cursor: pointer;
+  color: rgb(233, 41, 98);
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;cursor: pointer;
+}
+a:hover{
+    color: black;
+}
+
+
+    </style>
+</head>
+<body style="margin: 0;font-family: Inter,sans-serif;">
+    <div style="display:flex;height: 120px;background-image: url(bg1.webp);">
+        <div id="navleft">
+          <img src="./logo1.jpg" alt="" style="width:100%;
+          height:100%;">
+        </div>
+        <div  class="dropdown" style="overflow:hidden;">
+          <a href="./Paybills.html" style="color: white;"><button class="dropbtn"> 
+              Pay Bills </button></a><div class="dropdowncontent">  
+          <a href="./mobile recharge.html">Mobile Recharge</a>
+          <a href="./ElectricityBill.html">Electricity</a>
+        </div>
+      </div>  
+      <div  class="dropdown" style="overflow:hidden;">
+        <a href="./BookTickets.html" style="color: white;"><button class="dropbtn"> Book Tickets <i class="fa fa-caret-down"></i></button></a>
+           <div class="dropdowncontent">
+            <a href="./movieticket.html">Movie Tickets</a>
+            <a href="./bookflight.html">Flight Tickets</a>
+            <a href="./bookbus.html">Bus Tickets</a>
+            <a href="./booktrain.html">Train Tickets</a>
+        </div>
+      </div>
+      <div  class="dropdown" style="overflow:hidden;">
+            <a href="./BookTickets.html" style="color: white;"><button class="dropbtn">Help<i class="fa fa-caret-down"></i></button></a>
+               <div class="dropdowncontent">
+            <a href="">Please call 8888000012</a>
+            </div>
+      </div>
+      <div  class="dropdown" style="overflow:hidden;">
+          <a href="./homemain.html"><button class="dropbtn"> Logout <i class="fa fa-caret-down"></i></button>
+          <!-- <div class="dropdowncontent"></a> -->
+       <!-- </div> -->
+       </a>
+      </div>
+      <div  class="dropdown" style="overflow:hidden;">
+        <a href="./BookTickets.html" style="color: white;"><button class="dropbtn">  <span class="material-symbols-outlined">
+          person
+          </span></i></button></a>
+           <div class="dropdowncontent">
+        <a href=""> Name:John</a>
+        <a href="">Phone:1234567890</a>
+        <a href="">Subscription:Regular</a>
+        </div>
+      </div>
+      
+     
+    <div id="navright" >
+      <span class="material-symbols-outlined" style="position: absolute;left: 85%; top:7%;">
+          house
+      </span>
+      <a href="./home.html" style="font-family:Inter,sans-serif;position: absolute;left: 87%; top:7%;color:white;">Go to home</a>
+   </div>
+       
+      </div>
+      </div>
+
+    <div style="font-family: Inter,sans-serif;">
+        <div style="color:navy;margin-top: 0px;padding: 30px;font-family: Inter,sans-serif;font-size: xx-large;font-weight:
+         bolder;
+        ">
+         Pay Bills
+        </div>
+
+        <div style=" padding-top: 30px;padding-bottom:30px ;background-attachment: fixed;
+        ">
+        <div style="display:flex;justify-content: space-evenly; margin-bottom: 20px;">
+            <button class="buttonoptn" style="display: block;" ><a href="./mobile recharge.html" style="color:white;text-decoration: none;">Prepaid or Postpaid mobile</button></a><br>
+            <button class="buttonoptn">Book a cylinder</button><br>
+        </div>
+
+
+        <div style="display:flex;justify-content: space-evenly;">
+            <button class="buttonoptn" style="display: block;margin-bottom: 20px;"><a href="./ElectricityBill.html" style="color:white;text-decoration: none;">Electricity</a></button><br>
+            <button class="buttonoptn">DTH Recharge</button><br>
+        </div>
+    
+        
+        <div style="display:flex;justify-content: space-evenly;margin-bottom: 20px;">
+            <button class="buttonoptn">Metro Smartcard Recharge</button><br>
+            <button class="buttonoptn">Buy Fasttag</button><br>
+        </div>
+    </div>
+    </div>
+             
+           
+        
+</body>
+</html>

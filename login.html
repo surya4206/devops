@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>PayVerse Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-sec"></div>
+        <div class="log-in">
+            <div class="text">
+                <h1><span>Join PayVerse Now!</span></h1>
+            </div>
+            <div class="login">
+                <h3 class="ti"><span>Login to PayVerse</span></h3>
+                <form name="myform" action="Walletpage.html" method="post" onsubmit="login()">
+                    <input type="text" id="inp" name="username" placeholder="User name" required><br>
+                    <input type="password" id="inp" name="pass" placeholder="Password"  required><br>
+                    <input class="passw" type="submit" value="Login"  >
+                   
+                    <input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+	<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+                </form>
+                <a class="fpass" href="#">Forgot password?</a>
+            </div>
+            <div class="buttons">
+                <h4 class="ti">New to PayVerse?</h4>
+                <a href="./register.html" class="btn">
+                    <span>Sign up</span>
+                </a>
+            </div>
+        </div>
+    </div>
+        <script>
+        function Redirect() {
+            location.replace("https://www.tutorix.com");
+         }
+        function login()
+	    {
+		var uname = document.myform.username.value;
+		var pwd = document.getElementById("pass").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("Please fill out this field");
+            
+		}
+		else if(pwd=='')
+		{
+        	alert("Please fill out this field");
+            
+		}
+		else
+		{
+            alert('Thank You for Login & You are Redirecting to Campuslife Website');
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location = "https://www.campuslife.co.in";
+			}
+	}
+    </script>
+</body>
+</html>

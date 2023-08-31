@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif;}
+.container {display: flex; justify-content: space-between; width: 100%; min-height: 100vh;}
+.bg-sec {flex-basis: 50%; min-height: 100vh; background-image: url(dumimg.jpg); background-position: center; background-size: cover; position: relative;}
+.log-in {flex-basis: 50%; padding: 2em;}
+.text {margin: 2rem; margin-left: 0;}
+h3 {margin-top: 3rem;}
+.buttons {width: 18rem; margin-top: 1.5rem;}
+.login {display: flex; flex-direction: column; font-size:x-large; width: 200px; height: 200px; border-radius: 10px; box-shadow: 3px 3px 5px 5px #8888; font-family: 'Inter', sans-serif; width: 300px; height: 300px;border-radius: 10px;}
+.passw {display: inline-block;border: 1px solid rgb(33, 0, 124);display: flex;align-items: center;justify-content: center; color: black;text-decoration: none;padding: 0.7rem 0;width: 50%;border-radius: 1.5rem;transition: all 0.2s;margin: 1rem 4rem; font-weight: 700; margin-bottom: 0.5rem;}
+.passw:hover {background-color: rgb(33,0,124);color: white;}
+.ti { margin-top: 1rem; text-align: center;}
+.btn {border: 1px solid rgb(33, 0, 124);display: flex;justify-content: center; color: black;text-decoration: none;padding: 0.7rem 0;width: 80%;border-radius: 1.5rem;transition: all 0.2s;margin: 0.5rem 10%; font-weight: 600;}
+.btn:hover {background-color: rgb(33,0,124);color: white;}
+.fpass {margin:2rem; text-align: center; color: black; text-decoration: none;}
+.inp {font-size: 18px;margin-top: 10px; height: 40px; width: 275px; border-radius: 5px; align-items: center;}
+@media (max-width:1000px) {.container{flex-direction: column;}
+.bg-sec{flex-basis: 100%; min-height: 50vh;}
+.log-in{flex-basis: 100%; align-self: center;}
+h1{font-size: 4rem;}
+h1 span{display: block;}}
+@media (max-width:450px) {.log-in{padding: 1em;}
+h1{font-size: 2.5rem;}
+h1 span{display: inline-block;}}
