@@ -1,53 +1,18 @@
-name: Publish Docker image
+name: Docker Image CI
 
 on:
   push:
-    branches: ['main']
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  build_and_deploy:
-    name: Build and Deploy
+
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v3
-
-      - name: Set up XAMPP
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget
-          sudo wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.4/xampp-linux-x64-8.2.4-0-installer.run
-          sudo chmod +x xampp-linux-x64-8.2.4-0-installer.run
-          sudo ./xampp-linux-x64-8.2.4-0-installer.run
-          sudo ln -s /opt/lampp/lampp /usr/local/bin/lampp
-
-      - name: Install Composer
-        run: |
-          php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-          php composer-setup.php
-          php -r "unlink('composer-setup.php');"
-          mv composer.phar /usr/local/bin/composer
-
-      - name: Start XAMPP
-        run: sudo lampp start
-
-      - name: Stop XAMPP
-        run: sudo lampp stop
-      
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: vaishnavikamath
-          password: "vaishnavi123"
-      
-      - name: Build Docker Image
-        run: docker build -t devops1 .
-        
-      - name: Tag Docker Image
-        run: docker tag devops1:latest vaishnavikamath/devops1:latest
-      
-      - name: Push Docker Image
-        run: docker push vaishnavikamath/devops1:latest
-
-      - name: Run Docker Container
-        run: docker run -d -p 80:80 vaishnavikamath/devops1:latest
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag devops1:$(date +%s)
