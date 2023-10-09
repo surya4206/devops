@@ -6,7 +6,7 @@
 h3 {margin-top: 3rem;}
 .buttons {width: 18rem; margin-top: 1.5rem;}
 .login {display: flex; flex-direction: column; font-size:x-large; width: 200px; height: 200px; border-radius: 10px; box-shadow: 3px 3px 5px 5px #8888; font-family: 'Inter', sans-serif; width: 300px; height: 300px;}
-.passw {display: inline-block;border: 1px solid rgb(33, 0, 124);display: flex;align-items: center;justify-content: center; color: black;text-decoration: none;padding: 0.7rem 0;width: 50%;border-radius: 1.5rem;transition: all 0.2s;margin: 1rem 4rem; font-weight: 700; margin-bottom: 0.5rem;}
+.passw {display: inline-block;border: 1px solid rgb(33, 0, 124);display: flex;align-items: center;justify-content: center; color: black;text-decoration: none;padding: 0.7rem 0;width: 50%;border-radius: 1.5rem;margin: 1rem 4rem; font-weight: 700; margin-bottom: 0.5rem;}
 .passw:hover {background-color: rgb(33,0,124);color: white;}
 .ti { margin-top: 1rem; text-align: center;}
 .btn {border: 1px solid rgb(33, 0, 124);display: flex;justify-content: center; color: black;text-decoration: none;padding: 0.7rem 0;width: 80%;border-radius: 1.5rem;transition: all 0.2s;margin: 0.5rem 10%; font-weight: 600;}
